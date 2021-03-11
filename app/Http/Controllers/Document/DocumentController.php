@@ -13,7 +13,7 @@ class DocumentController extends Controller
 
        $user_id = Auth::user()->id;
 
-       $documents = Document::where('user_id', $user_id)->get();
+       $documents = Document::where('user_id', $user_id)->orderBy('id','DESC')->get();
        return view('document.index', compact('documents'));
    }
 

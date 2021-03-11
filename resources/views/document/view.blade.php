@@ -48,8 +48,7 @@
                 <div class="card-body">
                     <div class="form-group"> 
                         <strong>Document Description: </strong> <br>
-                        <label>{{ strip_tags($document->document_description) }}</label>
-                        {{-- <textarea rows="10" readonly class="form-control">{{ strip_tags($document->document_description) }}</textarea> --}}
+                        <label>{!! $document->document_description !!}</label>
                     </div>
                 </div>
             </div>
