@@ -41,18 +41,27 @@
                         @csrf
                         <div class="form-group">
                           <label>Document Title</label>
-                          <input type="text" class="form-control" name="document_title"  placeholder="Enter document title">
+                          <input type="text" class="form-control @error('document_title') is-invalid @enderror" name="document_title"  placeholder="Enter document title">
+                           @if($errors->has('document_title'))
+                             <p class="text-danger">{{ $errors->first('document_title') }}</p>
+                           @endif
                         </div>
 
                         <div class="form-group">
                           <label for="">Category Name</label>
-                          <input type="text" class="form-control" name="category_name"  placeholder="Enter category name">
+                          <input type="text" class="form-control @error('category_name') is-invalid @enderror" name="category_name"  placeholder="Enter category name">
+                          @if($errors->has('category_name'))
+                             <p class="text-danger">{{ $errors->first('category_name') }}</p>
+                           @endif
                         </div>
 
                         <div class="form-group">
                             <label for="">Document Description</label>
             
                             <textarea class="ckeditor form-control" name="document_description"></textarea>
+                            @if($errors->has('document_description'))
+                             <p class="text-danger">{{ $errors->first('document_description') }}</p>
+                           @endif
 
                         </div>
 
