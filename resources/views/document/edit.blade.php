@@ -59,7 +59,7 @@
 
                         <div class="form-group">
                             <label for="">Document Description</label>
-                            <textarea class="ckeditor form-control" name="document_description">{!! $document->document_title !!}</textarea>
+                            <textarea class="ckeditor form-control" name="document_description">{!! $document->document_description !!}</textarea>
 
                             {{-- <textarea cols="5" rows="5" name="document_description"  class="form-control">{{ $document->document_title }}</textarea> --}}
                         </div>
