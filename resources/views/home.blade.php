@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <h5>  Total Document Created: <strong>{{ $total_document_count }}</strong> </h5>
+                       <a href="{{ route('document.index') }}"> <h5>  Total Document Created: <strong>{{ $total_document_count }}</strong> </h5></a>
                         <hr>
                     
                         <h4> Welcome  <strong>{{ Auth::user()->name }}</strong></h4>

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Typingprogram</title>
+    <title>TyPingprogram</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -27,7 +27,7 @@
             <div class="container">
                 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <strong style="font-size: 25px; font-family: 'Roboto', sans-serif;">TYPINGPROGRAM</strong>
+                    <strong style="font-size: 25px; font-family: 'Roboto', sans-serif;">TyPingprogram</strong>
                 </a>
                 @auth
                 <a class="navbar-brand" href="{{ route('document.index') }}">

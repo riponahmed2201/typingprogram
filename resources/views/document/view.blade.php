@@ -13,31 +13,49 @@
 
 @section('content')
 <div class="container">
+ 
+    <div class="card">
+        <div class="card-header">
+            View Document
+           <div class="float-right">
+            <a href="{{ route('document.index') }}" class=" btn btn-success" style="text-decoration: none">All Document</a>
+            <a href="{{ route('document.edit',$document->id) }}" class=" btn btn-success" style="text-decoration: none">Edit Document</a>
+           </div>
+        </div>
+    </div>
+    <br>
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-4">
             <div class="card">
-                <div class="card-header">
-                    View Document
-                    <a href="{{ route('document.index') }}" class="float-right btn btn-success" style="text-decoration: none">All Document</a>
-                </div>
+               
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Document Title</label>
-                        <input readonly type="text" class="form-control" value="{{ $document->document_title }}">
+                        <strong>Document Title:  </strong> <br>
+                        <label>{{ $document->document_title }}</label>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Category Name</label>
-                        <input type="text" readonly class="form-control" value="{{ $document->category_name }}">
+                        <strong for="">Category Name</strong> <br>
+                        <label>{{ $document->category_name }}</label>
                     </div>
 
-                    <div class="form-group">
-                        <label for="">Document Description</label>
-                        <textarea rows="10" readonly class="form-control">{{ strip_tags($document->document_description) }}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group"> 
+                        <strong>Document Description: </strong> <br>
+                        <label>{{ strip_tags($document->document_description) }}</label>
+                        {{-- <textarea rows="10" readonly class="form-control">{{ strip_tags($document->document_description) }}</textarea> --}}
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
 @endsection
