@@ -11,7 +11,7 @@
             <div class="card">
                 <div class="card-header">
                     Add Document
-                    <a href="{{ route('document.index') }}" class="float-right btn btn-success" style="text-decoration: none">All New</a>
+                    <a href="{{ route('document.index') }}" class="float-right btn btn-success" style="text-decoration: none">All Document</a>
                 </div>
 
                 <div class="col-md-8 text-center offset-3 mt-2">

@@ -1,25 +1,21 @@
 @extends('layouts.app')
 
-@section('custom_css')
-<!-- include libraries(jQuery, bootstrap) -->
-{{-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-<!-- include summernote css/js -->
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> --}}
-
-@endsection
-
 @section('content')
+
+  <style>
+    .ckeditor
+    {
+       min-height: 150px !important;
+       max-height: 400px !important;
+    }
+   </style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    Add Document
-                    <a href="{{ route('document.index') }}" class="float-right btn btn-success" style="text-decoration: none">All New</a>
+                    Edit Document
+                    <a href="{{ route('document.index') }}" class="float-right btn btn-success" style="text-decoration: none">All Document</a>
                 </div>
 
                 <div class="col-md-8 text-center offset-3 mt-2">
@@ -65,7 +61,7 @@
 
                         <div class="form-group">
                             <label for="">Document Description</label>
-                            <textarea class="ckeditor form-control" name="document_description">{!! $document->document_description !!}</textarea>
+                            <textarea rows="20" class="ckeditor form-control" name="document_description">{!! $document->document_description !!}</textarea>
 
                             @if($errors->has('document_description'))
                              <p class="text-danger">{{ $errors->first('document_description') }}</p>

@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit/{id}',['as'=>'document.edit','uses'=>'Document\DocumentController@edit']);
         Route::post('/update/{id}',['as' => 'document.update', 'uses'=>'Document\DocumentController@update']);
         Route::get('/delete/{id}',['as'=>'document.delete','uses'=>'Document\DocumentController@destroy']);
+        Route::get('/view/{id}',['as'=>'document.view','uses'=>'Document\DocumentController@view']);
     });
 });
 

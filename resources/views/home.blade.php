@@ -13,8 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                     Welcome  <strong>{{ Auth::user()->name }}</strong>
+                        <h5>  Total Document Created: 10</h5>
+                        <hr>
+                    
+                        <h4> Welcome  <strong>{{ Auth::user()->name }}</strong></h4>
+                     
                 </div>
             </div>
         </div>

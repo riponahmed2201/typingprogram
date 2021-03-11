@@ -90,4 +90,11 @@ class DocumentController extends Controller
             return redirect()->back()->with('error','Something Error Found !, Please try again.');
         }
     }
+
+
+   public function view($id){
+    $document = Document::findOrFail($id);
+    // dd($document);
+    return view('document.view', compact('document'));
+    }
 }

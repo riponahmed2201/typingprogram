@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    {{ __('Dashboard') }}
+                    {{ __('All Document') }}
                     <a href="{{ route('document.create') }}" class="float-right btn btn-success" style="text-decoration: none">Add New</a>
                 </div>
 
@@ -39,7 +39,7 @@
                             <th>#</th>
                             <th>Document Title</th>
                             <th>Category Name</th>
-                            <th>Document Description</th>
+                            {{-- <th>Document Description</th> --}}
                             <th>Action</th>
                           </tr>
                         </thead>
@@ -49,10 +49,11 @@
                                 <th>{{ $loop->iteration }}</th>
                                 <td>{{ $document->document_title }}</td>
                                 <td>{{ $document->category_name }}</td>
-                                <td>{!! $document->document_description !!}</td>
+                                {{-- <td>{!! $document->document_description  !!}</td> --}}
                                 <td>
-                                    <a href="{{ route('document.edit',$document->id) }}" class="btn btn-info btn-sm">Edit</a>
-                                    <a href="{{ route('document.delete',$document->id) }}" class="btn btn-danger btn-sm">Delete</a>
+                                  <a  title="View Document" href="{{ route('document.view',$document->id) }}" class="btn btn-success btn-sm">View</a>
+                                    <a  title="Edit Document" href="{{ route('document.edit',$document->id) }}" class="btn btn-info btn-sm">Edit</a>
+                                    <a title="Delete Document" href="{{ route('document.delete',$document->id) }}" class="btn btn-danger btn-sm">Delete</a>
                                 </td>
                             </tr>                       
                           @endforeach

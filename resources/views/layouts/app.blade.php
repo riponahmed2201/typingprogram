@@ -27,7 +27,7 @@
             <div class="container">
                 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Typingprogram
+                    <strong style="font-size: 25px; font-family: 'Roboto', sans-serif;">TYPINGPROGRAM</strong>
                 </a>
                 @auth
                 <a class="navbar-brand" href="{{ route('document.index') }}">
