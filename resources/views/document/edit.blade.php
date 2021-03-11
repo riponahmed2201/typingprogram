@@ -59,7 +59,9 @@
 
                         <div class="form-group">
                             <label for="">Document Description</label>
-                            <textarea cols="5" rows="5" name="document_description"  class="form-control">{{ $document->document_title }}</textarea>
+                            <textarea class="ckeditor form-control" name="document_description">{!! $document->document_title !!}</textarea>
+
+                            {{-- <textarea cols="5" rows="5" name="document_description"  class="form-control">{{ $document->document_title }}</textarea> --}}
                         </div>
 
                         <button type="submit" class="btn btn-primary">Update</button>
@@ -73,18 +75,14 @@
 
 @section('custom_js')
 
-{{-- <script>
-    $('#summernote').summernote({
-    //   placeholder: 'Document Description',
-      tabsize: 2,
-      height: 100
-    });
-  </script> --}}
+<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 
-<script>
-    //   $(document).ready(function() {
-    // $('#summernote').summernote();
-//   });
+<script type="text/javascript">
+  $(document).ready(function() {
+     $('.ckeditor').ckeditor();
+  });
 </script>
+
      
 @endsection
+

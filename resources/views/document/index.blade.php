@@ -49,7 +49,7 @@
                                 <th>{{ $loop->iteration }}</th>
                                 <td>{{ $document->document_title }}</td>
                                 <td>{{ $document->category_name }}</td>
-                                <td>{{ $document->document_description }}</td>
+                                <td>{!! $document->document_description !!}</td>
                                 <td>
                                     <a href="{{ route('document.edit',$document->id) }}" class="btn btn-info btn-sm">Edit</a>
                                     <a href="{{ route('document.delete',$document->id) }}" class="btn btn-danger btn-sm">Delete</a>
